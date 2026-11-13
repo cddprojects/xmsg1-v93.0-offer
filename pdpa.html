@@ -4,266 +4,199 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy (PDPA) | FlexEarn SG</title>
-  <meta name="description" content="FlexEarn SG's Privacy Policy — how we collect, use, and protect your personal data in accordance with Singapore's Personal Data Protection Act (PDPA)." />
+  <meta name="description" content="How FlexEarn SG collects, uses, and protects personal data under Singapore's Personal Data Protection Act (PDPA)." />
   <meta name="robots" content="noindex" />
-
+  <meta name="theme-color" content="#F7F3EC" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239C4221'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-family='Georgia' fill='white'%3EF%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --green:   #006e47;
-      --green-m: #00915a;
-      --gold:    #b8860b;
-      --bg:      #f7f4ef;
-      --bg2:     #efeae2;
-      --surface: #ffffff;
-      --border:  #ddd6c8;
-      --ink:     #17192c;
-      --ink2:    #474f6e;
-      --muted:   #8a909d;
-      --radius:  16px;
-      --font-body:    'Inter', sans-serif;
-      --font-display: 'Syne', sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--ink);
+      margin: 0;
+      font-family: "Outfit", "Segoe UI", sans-serif;
+      background: #F7F3EC;
+      color: #1C1714;
       line-height: 1.7;
     }
-
-    a { color: var(--green); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      width: min(100%, 800px);
-      margin-inline: auto;
-      padding-inline: 24px;
+    a { color: #9C4221; }
+    .nav {
+      position: sticky;
+      top: 0;
+      background: rgba(247, 243, 236, 0.94);
+      border-bottom: 1px solid #E2D8C8;
+      backdrop-filter: blur(10px);
     }
-
-    /* Nav */
-    nav {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding-block: 16px;
-    }
+    .nav-inner, .wrap { width: min(760px, calc(100% - 32px)); margin-inline: auto; }
     .nav-inner {
+      min-height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
     }
-    .logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); text-decoration: none; }
-    .logo span { color: var(--green); }
-    .back-link { font-size: 0.85rem; color: var(--muted); }
-    .back-link:hover { color: var(--green); }
-
-    /* Header */
-    .page-header {
-      background: var(--green);
-      padding-block: 52px 44px;
-      text-align: center;
+    .logo {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.3rem;
+      color: #1C1714;
+      text-decoration: none;
+      font-weight: 640;
     }
-    .page-header h1 {
-      font-family: var(--font-display);
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      color: #fff;
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
+    .logo span { color: #9C4221; }
+    .back { color: #5C534C; text-decoration: none; font-size: 0.92rem; }
+    .back:hover { color: #9C4221; }
+    header.page { padding: 42px 0 8px; }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 560;
+      letter-spacing: -0.03em;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      line-height: 1.05;
+      margin: 0 0 8px;
     }
-    .page-header p {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
+    .sub { margin: 0; color: #5C534C; }
+    article {
+      background: #FFFDF9;
+      border: 1px solid #E2D8C8;
+      border-radius: 20px;
+      padding: 28px 22px;
+      margin: 24px auto 40px;
     }
-
-    /* Content */
-    .content {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 52px 48px;
-      margin-block: 40px;
-      border: 1px solid var(--border);
+    @media (min-width: 720px) { article { padding: 40px 40px; } }
+    .note {
+      background: #F7F3EC;
+      border-left: 3px solid #9C4221;
+      border-radius: 0 12px 12px 0;
+      padding: 14px 16px;
+      margin-bottom: 8px;
     }
-
-    .content h2 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--ink);
-      margin-top: 36px;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--green);
-      display: inline-block;
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 560;
+      margin: 28px 0 8px;
     }
-    .content h2:first-child { margin-top: 0; }
-
-    .content p {
-      font-size: 0.93rem;
-      color: var(--ink2);
-      margin-bottom: 14px;
-    }
-
-    .content ul {
-      margin: 10px 0 14px 20px;
-    }
-    .content ul li {
-      font-size: 0.93rem;
-      color: var(--ink2);
-      margin-bottom: 7px;
-    }
-
-    .highlight-box {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--gold);
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin: 20px 0;
-    }
-    .highlight-box p {
-      margin: 0;
+    p, li { color: #3F3832; }
+    ul { margin: 8px 0 12px; padding-left: 1.2rem; }
+    .updated {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid #E2D8C8;
+      color: #5C534C;
       font-size: 0.88rem;
-      color: var(--ink2);
     }
-
-    .last-updated {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
-
-    /* Footer */
     footer {
-      border-top: 1px solid var(--border);
-      padding-block: 28px;
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--muted);
-      background: var(--bg);
-      margin-top: 0;
+      border-top: 1px solid #E2D8C8;
+      padding: 22px 0 32px;
+      color: #5C534C;
+      font-size: 0.88rem;
     }
-    footer strong { color: var(--ink); }
-
-    @media (max-width: 480px) {
-      .content { padding: 32px 22px; margin-block: 24px; }
-      .page-header { padding-block: 40px 32px; }
-    }
+    footer strong { color: #1C1714; }
+    :focus-visible { outline: 2px solid #9C4221; outline-offset: 3px; }
   </style>
 </head>
 <body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">Flex<span>Earn</span> SG</a>
+      <a class="back" href="index.html">Back to home</a>
+    </div>
+  </nav>
 
-<nav>
-  <div class="container nav-inner">
-    <a href="index.html" class="logo">Flex<span>Earn</span> SG</a>
-    <a href="index.html" class="back-link">← Back to home</a>
-  </div>
-</nav>
+  <header class="page">
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+      <p class="sub">Singapore Personal Data Protection Act (PDPA)</p>
+    </div>
+  </header>
 
-<div class="page-header">
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <p>Personal Data Protection Act (PDPA) — Singapore</p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="content">
-
-    <div class="highlight-box">
-      <p>FlexEarn SG is committed to protecting your personal data in accordance with the <strong>Singapore Personal Data Protection Act 2012 (PDPA)</strong>. This policy explains what data we collect, why we collect it, and how we use it.</p>
+  <article class="wrap">
+    <div class="note">
+      <p>FlexEarn SG protects your personal data in line with the <strong>Singapore Personal Data Protection Act 2012 (PDPA)</strong>. This policy says what we collect, why we collect it, and how we use it.</p>
     </div>
 
-    <h2>1. Who We Are</h2>
-    <p>FlexEarn SG is a registered Singapore company. References to "we", "us", or "our" in this policy refer to FlexEarn SG and its authorised staff.</p>
-    <p>For data protection enquiries, contact us at: <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a></p>
+    <h2>1. Who we are</h2>
+    <p>FlexEarn SG is a registered Singapore company. “We”, “us”, and “our” mean FlexEarn SG and its authorised staff.</p>
+    <p>For data-protection questions, write to <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a>.</p>
 
-    <h2>2. What Personal Data We Collect</h2>
-    <p>When you submit an enquiry through our website, we collect the following:</p>
+    <h2>2. What personal data we collect</h2>
+    <p>When you send an enquiry through this website, we collect:</p>
     <ul>
       <li><strong>Full name</strong></li>
       <li><strong>Email address</strong></li>
-      <li><strong>WhatsApp / mobile number</strong></li>
+      <li><strong>WhatsApp or mobile number</strong></li>
     </ul>
-    <p>We do not collect sensitive personal data such as NRIC numbers, financial account details, or medical information through this website.</p>
+    <p>We do not collect sensitive personal data through this website, including NRIC numbers, financial account details, or medical information.</p>
 
-    <h2>3. Why We Collect Your Data</h2>
-    <p>Your data is collected for the following purposes:</p>
+    <h2>3. Why we collect your data</h2>
+    <p>We collect your data to:</p>
     <ul>
-      <li>To assess your suitability for available part-time work opportunities</li>
-      <li>To contact you via WhatsApp or email regarding your enquiry</li>
-      <li>To onboard you as a FlexEarn member if you are selected</li>
-      <li>To send relevant updates about opportunities (you may opt out at any time)</li>
+      <li>Assess whether you suit the part-time work available</li>
+      <li>Contact you by WhatsApp or email about your enquiry</li>
+      <li>Onboard you as a FlexEarn member if you are selected</li>
+      <li>Send relevant updates about opportunities — you can opt out at any time</li>
     </ul>
-    <p>We will not use your data for any purpose not listed above without your consent.</p>
+    <p>We will not use your data for a purpose that is not listed here unless you consent.</p>
 
-    <h2>4. How We Use Your Data</h2>
-    <p>Your personal data is used by FlexEarn SG staff only. We use it to:</p>
+    <h2>4. How we use your data</h2>
+    <p>Only FlexEarn SG staff use your personal data. We use it to:</p>
     <ul>
-      <li>Review your profile and determine suitability</li>
-      <li>Reach out to you via WhatsApp within 24 hours if you are a suitable candidate</li>
-      <li>Coordinate work assignments and payment if you join as a member</li>
+      <li>Review your profile and decide whether you are suitable</li>
+      <li>Contact you on WhatsApp within 24 hours if you are a suitable candidate</li>
+      <li>Arrange work and payment if you join as a member</li>
     </ul>
 
-    <h2>5. Who We Share Your Data With</h2>
-    <p>We do not sell, rent, or trade your personal data to third parties.</p>
-    <p>Your data may be shared with:</p>
+    <h2>5. Who we share your data with</h2>
+    <p>We do not sell, rent, or trade your personal data.</p>
+    <p>We may share it with:</p>
     <ul>
-      <li><strong>Internal FlexEarn SG team members</strong> involved in recruitment and operations</li>
-      <li><strong>Service providers</strong> who assist us in operating our systems (e.g. cloud storage, communication tools) — bound by confidentiality obligations</li>
+      <li><strong>FlexEarn SG team members</strong> who handle recruitment and operations</li>
+      <li><strong>Service providers</strong> who help us run our systems, such as cloud storage and communication tools, and who are bound by confidentiality</li>
     </ul>
-    <p>We will only disclose your data to external parties if required by law or a Singapore authority.</p>
+    <p>We disclose your data to anyone else only when the law or a Singapore authority requires it.</p>
 
-    <h2>6. How Long We Retain Your Data</h2>
+    <h2>6. How long we keep your data</h2>
     <ul>
-      <li><strong>Unsuccessful applicants:</strong> Data is retained for up to 12 months from the date of enquiry, then securely deleted.</li>
-      <li><strong>Active members:</strong> Data is retained for the duration of the working relationship and up to 2 years thereafter for compliance purposes.</li>
+      <li><strong>Unsuccessful applicants:</strong> up to 12 months from the enquiry, then securely deleted.</li>
+      <li><strong>Active members:</strong> for the working relationship, and for up to 2 years after it ends, for compliance.</li>
     </ul>
 
-    <h2>7. How We Protect Your Data</h2>
-    <p>We take reasonable security measures to protect your personal data from unauthorised access, disclosure, or modification. These include access controls, secure communication channels, and staff confidentiality obligations.</p>
+    <h2>7. How we protect your data</h2>
+    <p>We take reasonable steps to protect your personal data from unauthorised access, disclosure, or change. Those steps include access controls, secure communication channels, and confidentiality duties for staff.</p>
 
-    <h2>8. Your Rights Under the PDPA</h2>
-    <p>As a data subject, you have the right to:</p>
+    <h2>8. Your rights under the PDPA</h2>
+    <p>You have the right to:</p>
     <ul>
       <li><strong>Access</strong> the personal data we hold about you</li>
-      <li><strong>Correct</strong> any inaccurate or incomplete personal data</li>
-      <li><strong>Withdraw consent</strong> for us to use your data at any time (note: this may affect our ability to process your application)</li>
-      <li><strong>Request deletion</strong> of your personal data, subject to our legal retention obligations</li>
+      <li><strong>Correct</strong> personal data that is inaccurate or incomplete</li>
+      <li><strong>Withdraw consent</strong> for us to use your data at any time — this may affect our ability to process your application</li>
+      <li><strong>Ask us to delete</strong> your personal data, subject to any retention the law requires</li>
     </ul>
-    <p>To exercise any of these rights, contact us at <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a>. We will respond within 30 days.</p>
+    <p>To use any of these rights, email <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a>. We will respond within 30 days.</p>
 
     <h2>9. Cookies</h2>
-    <p>Our website does not currently use tracking cookies or third-party analytics. Basic browser functionality may use session cookies which are not used to identify you personally.</p>
+    <p>This website does not currently use tracking cookies or third-party analytics. A browser may use session cookies for basic function. We do not use those to identify you.</p>
 
-    <h2>10. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any significant changes will be reflected with an updated date below. Continued use of our website after changes are posted constitutes acceptance of the updated policy.</p>
+    <h2>10. Changes to this policy</h2>
+    <p>We may update this policy. A material change will show a new date below. If you keep using the website after we post a change, you accept the updated policy.</p>
 
-    <h2>11. Contact Us</h2>
-    <p>For any questions or concerns about this Privacy Policy or your personal data:</p>
+    <h2>11. Contact us</h2>
+    <p>Questions about this policy or your personal data:</p>
     <ul>
       <li><strong>Email:</strong> <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a></li>
-      <li><strong>Company:</strong> FlexEarn SG (Registered in Singapore)</li>
+      <li><strong>Company:</strong> FlexEarn SG, registered in Singapore</li>
     </ul>
-    <p>You may also lodge a complaint with the <a href="https://www.pdpc.gov.sg" target="_blank" rel="noopener">Personal Data Protection Commission (PDPC)</a> if you believe your data rights have been infringed.</p>
+    <p>You can also complain to the <a href="https://www.pdpc.gov.sg" target="_blank" rel="noopener">Personal Data Protection Commission (PDPC)</a> if you believe your data rights have been infringed.</p>
 
-    <p class="last-updated">Last updated: September 2026</p>
-  </div>
-</div>
+    <p class="updated">Last updated: September 2026</p>
+  </article>
 
-<footer>
-  <div class="container">
-    <p style="margin-bottom:5px"><strong>FlexEarn SG</strong> — Part-Time Work From Home Singapore</p>
-    <p>Registered in Singapore · PDPA Compliant · <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a></p>
-  </div>
-</footer>
-
+  <footer>
+    <div class="wrap">
+      <p><strong>FlexEarn SG</strong> — Part-time work from home in Singapore</p>
+      <p>Registered in Singapore · PDPA compliant · <a href="mailto:hello@flexearnsg.com">hello@flexearnsg.com</a></p>
+    </div>
+  </footer>
 </body>
 </html>
