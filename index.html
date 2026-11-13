@@ -463,15 +463,38 @@
       font-size: clamp(1.6rem, 4vw, 2.6rem);
       line-height: 1.2;
     }
-    .slogans {
+    .ticker {
+      overflow: hidden;
+      background: var(--ink-bg);
+      color: #F7F3EC;
+      padding: 16px 0;
+    }
+    .ticker-track {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      list-style: none;
-      padding: 18px 0 0;
+      width: max-content;
+      animation: ticker 36s linear infinite;
+    }
+    .ticker-track p {
       margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding-right: 28px;
+      white-space: nowrap;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    }
+    .ticker-track span { color: #E7B59A; }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker { overflow: visible; }
+      .ticker-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; padding: 0 20px; }
+      .ticker-track p:last-child { display: none; }
+      .ticker-track p { white-space: normal; flex-wrap: wrap; justify-content: center; }
     }
 
     .about {
@@ -963,16 +986,16 @@
       </div>
     </section>
 
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <p>Earn money from home <span>·</span> A part-time side job beside a full life <span>·</span> Work from home in Singapore <span>·</span> A second income, in real money <span>·</span> Earn for the people you care about <span>·</span></p>
+        <p>Earn money from home <span>·</span> A part-time side job beside a full life <span>·</span> Work from home in Singapore <span>·</span> A second income, in real money <span>·</span> Earn for the people you care about <span>·</span></p>
+      </div>
+    </div>
+
     <section class="block">
       <div class="wrap">
-        <ul class="slogans">
-          <li>Earn money from home</li>
-          <li>A part-time side job beside a full life</li>
-          <li>Work from home in Singapore</li>
-          <li>A second income, in real money</li>
-          <li>Earn for the people you care about</li>
-        </ul>
-        <div class="about" style="margin-top: 28px;">
+        <div class="about">
           <div>
             <p class="kicker">Who we are</p>
             <h2>A side job that fits around your day.</h2>
