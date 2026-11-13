@@ -443,16 +443,30 @@
     .review-grid:not(.is-open) + .more-row #revLessBtn { display: none; }
 
     .thread {
-      background: #EFE6D6 url("images/wp_doodle_dark.svg") center / 180px repeat;
+      background-color: #EFEAE2;
+      background-image: url("images/wp_doodle_dark.svg");
+      background-size: 180px;
+      background-repeat: repeat;
       border-radius: 14px;
       padding: 12px;
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
+    .thread.teal {
+      background-color: #C5E8DE;
+      background-image: radial-gradient(rgba(27, 67, 50, 0.1) 1.2px, transparent 1.2px);
+      background-size: 14px 14px;
+    }
+    .thread.peach {
+      background-color: #F3D4C4;
+      background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0 8px, transparent 8px 16px);
+    }
     .thread.leaves {
-      background-image: linear-gradient(rgba(255, 250, 242, 0.84), rgba(255, 250, 242, 0.84)), url("images/wp_leaves.jpg");
+      background-color: #3d4a38;
+      background-image: linear-gradient(rgba(20, 28, 16, 0.28), rgba(20, 28, 16, 0.28)), url("images/wp_leaves.jpg");
       background-size: cover;
+      background-position: center;
     }
     .thread p {
       max-width: 90%;
@@ -461,10 +475,30 @@
       border-radius: 12px;
       font-size: 0.88rem;
       line-height: 1.4;
+      box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.08);
     }
-    .thread .out { align-self: flex-end; background: #F4E3CC; border-bottom-right-radius: 4px; }
+    .thread .out { align-self: flex-end; background: #D9FDD3; border-bottom-right-radius: 4px; }
     .thread .in { align-self: flex-start; background: #fff; border-bottom-left-radius: 4px; }
-    .thread time { display: block; text-align: right; font-size: 0.68rem; color: #6d655c; margin-top: 3px; }
+    .thread.leaves .in { background: rgba(255, 255, 255, 0.94); }
+    .thread time {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 3px;
+      margin-top: 3px;
+      font-size: 0.68rem;
+      color: #667781;
+    }
+    .thread .out time::after {
+      content: "";
+      width: 16px;
+      height: 11px;
+      flex: none;
+      background-color: #8D9599;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 11'%3E%3Cpath d='M0.9 6.2l3.1 3.15L11.4 1.4' fill='none' stroke='black' stroke-width='1.55' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.15 6.2l3.1 3.15L15.1 1.55' fill='none' stroke='black' stroke-width='1.55' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 11'%3E%3Cpath d='M0.9 6.2l3.1 3.15L11.4 1.4' fill='none' stroke='black' stroke-width='1.55' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.15 6.2l3.1 3.15L15.1 1.55' fill='none' stroke='black' stroke-width='1.55' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+    .thread .out.seen time::after { background-color: #53BDEB; }
     .thread .day {
       align-self: center;
       background: rgba(255, 255, 255, 0.8);
@@ -882,9 +916,9 @@
             <div class="meta"><p class="stars" aria-label="5 out of 5"><span aria-hidden="true">★★★★★</span></p><span class="when">2 weeks ago</span></div>
             <p>I didn’t expect much. The first week’s PayNow was $1,280. I only work at night, after the children are asleep. This one is genuine.</p>
             <div class="thread" aria-label="Jamie's messages">
-              <p class="out">The PayNow just arrived.<time>12:13</time></p>
-              <p class="out">$1,280 in 11 days.<time>12:13</time></p>
-              <p class="out">I only do this at night after the kids are asleep.<time>12:14</time></p>
+              <p class="out seen">The PayNow just arrived.<time>12:13</time></p>
+              <p class="out seen">$1,280 in 11 days.<time>12:13</time></p>
+              <p class="out seen">I only do this at night after the kids are asleep.<time>12:14</time></p>
               <p class="in">Yes — week 1 is in. 14 tasks. Well done.<time>12:16</time></p>
               <p class="out">14 tasks and already about $1,280?<time>12:25</time></p>
               <p class="out">I’ll put in more time this weekend. Thank you.<time>12:26</time></p>
@@ -907,10 +941,10 @@
             </div>
             <div class="meta"><p class="stars" aria-label="5 out of 5"><span aria-hidden="true">★★★★★</span></p><span class="when">3 weeks ago</span></div>
             <p>I asked what work they actually have. They explained it plainly, and it can be done from home. I have young children, so that fits.</p>
-            <div class="thread" aria-label="Ahmad's messages">
-              <p class="out">Hi, I’m looking for part-time work. What jobs do you have?<time>17:25</time></p>
+            <div class="thread teal" aria-label="Ahmad's messages">
+              <p class="out seen">Hi, I’m looking for part-time work. What jobs do you have?<time>17:25</time></p>
               <p class="in">Product testing, mystery shopping, and short content tasks. You choose. There’s no quota.<time>17:28</time></p>
-              <p class="out">Can I do it from home? I have young kids.<time>17:31</time></p>
+              <p class="out seen">Can I do it from home? I have young kids.<time>17:31</time></p>
               <p class="in">Most tasks are from home. Mystery shopping can be at a mall if you want the extra.<time>17:32</time></p>
             </div>
           </article>
@@ -922,8 +956,8 @@
             </div>
             <div class="meta"><p class="stars" aria-label="3 out of 5"><span aria-hidden="true">★★★<span class="off">★★</span></span></p><span class="when">1 month ago</span></div>
             <p>The tasks are fine, but weekend support is slow. I waited almost a full day for a reply. That part could be better.</p>
-            <div class="thread" aria-label="Priya's messages">
-              <p class="out">Why is the reply so slow?<time>11:02</time></p>
+            <div class="thread peach" aria-label="Priya's messages">
+              <p class="out seen">Why is the reply so slow?<time>11:02</time></p>
               <p class="in">Sorry — the weekend queue is long. I’m with you now.<time>10:18</time></p>
             </div>
           </article>
@@ -945,13 +979,13 @@
             <div class="meta"><p class="stars" aria-label="5 out of 5"><span aria-hidden="true">★★★★★</span></p><span class="when">2 months ago</span></div>
             <p>I thought it was a scam. A colleague said the same. I checked ACRA. There is no top-up. I could earn in the first week.</p>
             <div class="thread leaves" aria-label="Daniel's messages">
-              <p class="out">Is this a scam? My colleague says these side-income things usually are.<time>08:02</time></p>
+              <p class="out seen">Is this a scam? My colleague says these side-income things usually are.<time>08:02</time></p>
               <p class="in">No. We’re ACRA-registered, UEN 202127813C. You can check BizFile yourself. We never ask you to top up.<time>08:10</time></p>
-              <p class="out">I checked. Then why do so many people get scammed?<time>08:14</time></p>
+              <p class="out seen">I checked. Then why do so many people get scammed?<time>08:14</time></p>
               <p class="in">Those ask you to pay first. We don’t. You do the task, then we pay you.<time>08:16</time></p>
               <p class="out">Alright, I’ll try.<time>08:22</time></p>
               <p class="day">Today</p>
-              <p class="out">I take that back. I could earn in the first week. My mistake.<time>08:41</time></p>
+              <p class="out seen">I take that back. I could earn in the first week. My mistake.<time>08:41</time></p>
             </div>
           </article>
 
