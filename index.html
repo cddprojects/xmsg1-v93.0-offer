@@ -403,19 +403,25 @@
     .ink-form .form-note { color: rgba(247, 243, 236, 0.65); }
     .ink-form .btn { width: 100%; }
 
-    .review-grid { display: grid; gap: 14px; margin-top: 28px; }
-    @media (min-width: 800px) { .review-grid { grid-template-columns: 1fr 1fr; } }
+    .review-grid {
+      margin-top: 28px;
+      columns: 1;
+      column-gap: 14px;
+    }
+    @media (min-width: 800px) { .review-grid { columns: 2; } }
     .review {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+      margin: 0 0 14px;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 18px;
     }
+    .review > * + * { margin-top: 10px; }
     .review.more { display: none; }
-    .review-grid.is-open .review.more { display: flex; }
+    .review-grid.is-open .review.more { display: inline-block; }
     .who { display: flex; gap: 12px; align-items: center; }
     .av {
       width: 46px; height: 46px; border-radius: 50%;
